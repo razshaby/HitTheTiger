@@ -4,48 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/welcometiger"
     tools:context=".WelcomeActivity"
-    android:background="@drawable/welcometiger">
+    android:screenOrientation="portrait"
+    >
 
+    <LinearLayout
+        android:id="@+id/linearBtns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:layoutDirection="ltr"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_start_animation"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Start Animation" />
+
+        <Button
+            android:id="@+id/btn_stop_animation"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Stop Animation" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_above="@+id/map"
+        android:layout_below="@+id/place_txt"
+        android:alpha="0.9"
+        android:background="#EED9D9" />
 
     <TextView
-        android:id="@+id/location_result"
+        android:id="@+id/place_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:textColor="#333"
-        android:textSize="18dp"
-        android:layout_above="@+id/map"
-        android:layout_centerHorizontal="true"
-        android:text="hello"/>
+        android:layout_below="@+id/linearBtns"
+        android:layout_centerInParent="true"
+        android:background="#F5EDED"
+        android:textColor="#FF0000"
+        android:textSize="30dp" />
 
-
-    <TextView
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Location"
-        android:textSize="20sp"
-        android:id="@+id/show_location"
-        android:layout_above="@+id/location_result"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Get Location"
-        android:id="@+id/getLocation"
-        android:layout_above="@+id/show_location"
-        />
-
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:map="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
-    android:layout_width="match_parent"
-    android:layout_height="350dp"
-    tools:context=".MapsActivity"
-    android:layout_alignParentBottom="true"
-    />
+        android:layout_height="350dp"
+        android:layout_alignParentBottom="true"
+        tools:context=".MapsActivity" />
 
 
 </RelativeLayout>

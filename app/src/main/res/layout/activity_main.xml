@@ -1,181 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:context=".MainActivity"
-                android:id="@+id/main_layout"
-                android:background="@drawable/background">
-
-<!--                <LinearLayout-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:orientation="horizontal"-->
-<!--                    android:layoutDirection="ltr"-->
-
-<!--                 >-->
-<!--                                <TextView-->
-<!--                                        android:layout_width="wrap_content"-->
-<!--                                        android:layout_height="wrap_content"-->
-
-<!--                                        android:textSize="20dp"-->
-<!--                                        android:text="Score:"-->
-<!--                                    />-->
-<!--                                <TextView-->
-<!--                                        android:layout_width="wrap_content"-->
-<!--                                        android:layout_height="wrap_content"-->
-<!--                                        android:text="0"-->
-<!--                                        android:textSize="20dp"-->
-<!--                                        android:textColor="#E70734"-->
-<!--                                        android:id="@+id/the_score"-->
-<!--                                    android:paddingRight="60dp"-->
-
-
-<!--                                    />-->
-
-<!--                                <TextView-->
-<!--                                        android:layout_width="wrap_content"-->
-<!--                                        android:layout_height="wrap_content"-->
-<!--                                        android:text="Life:"-->
-<!--                                        android:textSize="20dp"-->
-<!--                                    android:layout_weight="0.16"-->
-<!--                                 />-->
-<!--                                 <LinearLayout-->
-<!--                                        android:layout_width="wrap_content"-->
-<!--                                        android:layout_height="wrap_content"-->
-<!--                                        android:orientation="horizontal"-->
-<!--                                        android:id="@+id/life_container"-->
-<!--                                     android:layout_weight="1"-->
-<!--                                     >-->
-
-
-<!--                                 </LinearLayout>-->
-
-
-                                    <TextView
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-
-                                            android:textSize="20dp"
-                                            android:text="Score:"
-                                        android:id="@+id/score_txt"
-                                        android:layout_alignParentLeft="true"
-                                        />
-                                    <TextView
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:text="0"
-                                            android:textSize="20dp"
-                                            android:textColor="#E70734"
-                                            android:id="@+id/the_score"
-                                            android:layout_toRightOf="@+id/score_txt"
-
-                                        />
-
-
-
-                                    <TextView
-                                        android:text="Life:"
-                                        android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                        android:id="@+id/txt_life"
-                                            android:textSize="20dp"
-                                        android:layout_toRightOf="@id/the_score"
-                                        android:paddingLeft="50dp"
-
-                                        />
-
-
-
-
-
-                                     <LinearLayout
-                                         android:id="@+id/life_container"
-
-                                         android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:orientation="horizontal"
-                                         android:layout_toRightOf="@id/txt_life"
-
-                                         />
-
-
-
-
-
-                                <TextView
-                                    android:id="@+id/txt_time_left"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/time_left"
-                                    android:textSize="20dp"
-                                    android:layout_toLeftOf="@id/time_left"
-                                    />
-
-                                <TextView
-                                    android:id="@+id/time_left"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textSize="20dp"
-                                    android:textColor="#E70734"
-                                    android:layout_alignParentRight="true"
-
-                                    />
-
-
-
-
-                <TextView
-                    android:id="@+id/instructions_textView"
-                    android:layout_below="@+id/score_txt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Hit The Tiger!"
-                    android:textSize="40dp"
-                    android:textColor="#2364E4"
-                    android:layout_alignParentLeft="true"/>
-
-    <GridLayout
-        android:id="@+id/game_grid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/instructions_textView"
-        android:paddingTop="20dp"
-        />
-
-
-    <TextView
-        android:id="@+id/msg_game"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/playAgainBtn"
-        />
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
 
 
     <Button
         android:id="@+id/scoreBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/show_high_score"
         android:layout_above="@+id/playAgainBtn"
-        />
+        android:text="@string/save_my_score" />
 
-<Button
-    android:id="@+id/playAgainBtn"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    <Button
+        android:id="@+id/playAgainBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
-android:layout_alignParentBottom="true"
-    />
+        android:layout_alignParentBottom="true" />
+
+
+    <GridLayout
+        android:id="@+id/game_grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/instructions_textView"
+        android:paddingTop="20dp" />
+
 
     <ImageView
         android:id="@+id/soundSong"
-    android:layout_width="35dp"
-    android:layout_height="35dp"
-android:src="@drawable/soundoff"
-        android:layout_toRightOf="@id/instructions_textView"
-android:layout_alignBottom="@id/instructions_textView"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignBottom="@id/instructions_textView"
         android:layout_marginLeft="10dp"
-    />
-    </RelativeLayout>
+        android:layout_toRightOf="@id/instructions_textView"
+        android:src="@drawable/soundoff" />
+
+
+    <LinearLayout
+        android:id="@+id/life_container"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/txt_life"
+        android:orientation="horizontal"
+
+        />
+
+    <TextView
+        android:id="@+id/score_txt"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="Score:"
+        android:textSize="20dp" />
+
+
+    <TextView
+        android:id="@+id/the_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/score_txt"
+        android:text="0"
+        android:textColor="#E70734"
+        android:textSize="20dp"
+
+        />
+
+    <TextView
+        android:id="@+id/txt_life"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/the_score"
+        android:paddingLeft="50dp"
+        android:text="Life:"
+        android:textSize="20dp"
+
+        />
+
+
+    <TextView
+        android:id="@+id/txt_time_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/time_left"
+        android:text="@string/time_left"
+        android:textSize="20dp" />
+
+
+    <TextView
+        android:id="@+id/time_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textColor="#E70734"
+        android:textSize="20dp"
+
+        />
+
+    <TextView
+        android:id="@+id/instructions_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/score_txt"
+        android:layout_alignParentLeft="true"
+        android:text="Hit The Tiger!"
+        android:textColor="#2364E4"
+        android:textSize="40dp" />
+
+    <TextView
+        android:id="@+id/msg_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/scoreBtn" />
+</RelativeLayout>

@@ -4,60 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WelcomeActivity"
-    android:background="@drawable/welcometiger">
-
-<TextView
-    android:id="@+id/enter_name"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="@string/enter_your_name"
-    android:textColor="#FF0000"
-    android:textSize="30dp"
-    android:layout_alignParentLeft="true"
-    />
-
-    <EditText
-        android:id="@+id/name_editText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/enter_name"
-        android:backgroundTint="#FFFFFF"
-        android:hint="your name"
-        android:inputType="text"
-android:textSize="30dp"
-        android:maxLength="20"
-        android:selectAllOnFocus="true"
-        android:singleLine="true"
-        android:textColor="#FF0000" />
+    android:background="@drawable/welcometiger"
+    tools:context=".WelcomeActivity">
 
     <Button
         android:id="@+id/btn_welcome_startGame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/name_editText"
-        android:layout_centerHorizontal="true"
+android:layout_above="@id/facebook_login_button"        android:layout_centerHorizontal="true"
         android:background="@drawable/btn"
         android:text="@string/start_game"
         android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/name_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+android:layout_above="@id/btn_welcome_startGame"        android:backgroundTint="#FFFFFF"
+        android:hint="your name"
+        android:inputType="text"
+        android:maxLength="20"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:textColor="#FF0000"
+        android:textSize="30dp" />
+
+    <TextView
+
+        android:layout_above="@id/name_editText"
+        android:id="@+id/enter_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="@string/enter_your_name"
+        android:textColor="#FF0000"
+        android:textSize="30dp" />
 
     <TextView
         android:id="@+id/message_game"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/game_grid"
-        />
-
+        android:layout_below="@+id/game_grid" />
 
 
     <com.facebook.login.widget.LoginButton
-        android:layout_below="@+id/btn_welcome_startGame"
-        android:layout_centerInParent="true"
-        android:id="@+id/login_button"
+        android:id="@+id/facebook_login_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp" />
+        />
 
 </RelativeLayout>
